@@ -1,0 +1,52 @@
+
+ECOSNAP - ANDROID IMPLEMENTATION OUTLINE
+-----------------------------------------
+
+1. PROJECT SETUP (build.gradle.kts)
+   - Add CameraX dependencies (camera-camera2, camera-lifecycle, camera-view)
+   - Add Coil for image loading
+   - Add Google GenAI SDK (com.google.ai.client.generativeai)
+   - Add Jetpack Navigation Compose
+
+2. THEME (Color.kt)
+   - Primary: #059669 (Emerald 600)
+   - Secondary: #ecfdf5 (Emerald 50)
+   - Background: #ffffff
+
+3. APP ARCHITECTURE
+   - Use Clean Architecture with MVVM
+   - Repository: EcoRepository (handles Gemini API calls)
+   - ViewModel: HomeViewModel, ScanViewModel, SwapsViewModel
+
+4. MAIN SCREENS (Jetpack Compose)
+   
+   // HomeScreen.kt
+   @Composable
+   fun HomeScreen(onNavigate: (String) -> Unit) {
+     Column {
+       EcoHeader()
+       ActionCard("Scan Product", "📸", onClick = { onNavigate("scan") })
+       ActionCard("Alternatives", "♻️", onClick = { onNavigate("swaps") })
+       ActionCard("Waste Guide", "🗑️", onClick = { onNavigate("waste") })
+     }
+   }
+
+   // ScanScreen.kt
+   @Composable
+   fun ScanScreen() {
+     val cameraController = remember { LifecycleCameraController(context) }
+     Box {
+       AndroidView(factory = { PreviewView(it).apply { controller = cameraController } })
+       CaptureButton(onClick = { takePhoto(cameraController) })
+     }
+   }
+
+5. PROMPTS USED FOR AI DECISIONS
+   - "Analyze this product image. Identify product type, eco-score (1-10), and recycling tip. Return JSON."
+   - "Suggest 3 eco-friendly alternatives for [ItemName]. Return JSON list."
+   - "Identify the correct disposal bin (Wet, Dry, E-Waste) for [ItemName]. Return JSON."
+
+6. HACKATHON FOCUS
+   - Use Gemini Flash 2.0 for low latency
+   - Implement "Offline Mode" for common waste items using a local JSON map
+   - Focus on UI/UX micro-animations in Compose

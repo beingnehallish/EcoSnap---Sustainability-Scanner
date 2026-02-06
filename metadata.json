@@ -1,0 +1,8 @@
+
+{
+  "name": "EcoSnap – Sustainability Scanner",
+  "description": "An AI-powered sustainability scanner that helps users identify eco-friendly products, find green alternatives, and manage waste segregation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
