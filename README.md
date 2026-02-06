@@ -1,20 +1,133 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🌱 EcoSnap – Sustainability Scanner
 
-# Run and deploy your AI Studio app
+EcoSnap is an AI-powered sustainability awareness application that helps users evaluate the environmental impact of everyday products. By using image-based analysis and generative AI, the app provides eco scores, greener alternatives, and waste segregation guidance to promote eco-friendly living.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/temp/2
+## 🚀 Features
 
-## Run Locally
+### 📷 Product Sustainability Scanner
+- Upload or scan product images  
+- AI identifies product type and material  
+- Generates an **Eco Score (1–10)**  
+- Provides environmental impact explanation  
+- Gives eco-friendly tips  
 
-**Prerequisites:**  Node.js
+---
+
+### 🌍 Greener Alternatives
+- Suggests eco-friendly substitutes  
+- Encourages reusable and biodegradable products  
+- Helps users make sustainable choices  
+
+---
+
+### 🗑️ Waste Segregation Guide
+- Classifies waste into:
+  - Wet Waste  
+  - Dry Waste  
+  - E-Waste  
+- Provides disposal tips  
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- React (Vite)
+- HTML/CSS
+- JavaScript
+
+**AI Integration**
+- Google Gemini API (AI Studio)
+- Multimodal AI (Image + Text understanding)
+
+**Other Tools**
+- REST API calls
+- JSON data handling
+- Image upload/camera input
+
+---
+
+## 🧠 How It Works
+
+1. User uploads/scans a product image  
+2. Image is sent to Gemini AI API  
+3. AI analyzes product type and materials  
+4. AI generates:
+   - Eco Score  
+   - Explanation  
+   - Tips  
+   - Alternatives  
+5. Results displayed in user-friendly cards  
+
+---
+
+## 📂 Project Structure
+EcoSnap/
+│
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── services/
+│ └── App.jsx
+│
+├── public/
+├── package.json
+└── README.md
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the Repository
+git clone https://github.com/beingnehallish/EcoSnap---Sustainability-Scanner.git
+
+### 2️⃣ Install Dependencies
+npm install
+
+
+### 3️⃣ Add Environment Variables
+Create `.env` file:
+VITE_GEMINI_API_KEY=your_api_key_here
+
+
+### 4️⃣ Run the App
+npm run dev
+
+
+---
+
+## 🔐 Security
+- API keys stored in environment variables  
+- No personal user data stored  
+- Stateless AI requests  
+
+---
+
+## 🌱 Future Enhancements
+- Barcode scanning  
+- Carbon footprint tracking  
+- User eco-history dashboard  
+- Gamification (Eco Points & Rewards)  
+- Product sustainability database  
+
+---
+
+## 🎯 Objective
+
+To make sustainability decisions simple and accessible by turning complex environmental data into easy AI-driven insights.
+
+---
+
+## 👨‍💻 Author
+Developed as an AI prototype project to promote sustainable living and environmental awareness.
+
+---
+
+## 📜 License
+This project is for educational and prototype purposes.
+
+## 📂 Project Structure
+
