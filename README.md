@@ -1,6 +1,7 @@
 # 🌱 EcoSnap – Sustainability Scanner
 
 EcoSnap is an AI-powered sustainability awareness application that helps users evaluate the environmental impact of everyday products. By using image-based analysis and generative AI, the app provides eco scores, greener alternatives, and waste segregation guidance to promote eco-friendly living.
+<img width="1920" height="1080" alt="Untitled design (7)" src="https://github.com/user-attachments/assets/a94a1c4c-43ad-4dba-a1a0-3b5aaeba05c6" />
 
 ---
 
