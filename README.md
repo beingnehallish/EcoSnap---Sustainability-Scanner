@@ -129,5 +129,4 @@ Developed as an AI prototype project to promote sustainable living and environme
 ## 📜 License
 This project is for educational and prototype purposes.
 
-## 📂 Project Structure
 
